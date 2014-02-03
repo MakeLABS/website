@@ -39,6 +39,23 @@ button { border: 2px solid gray;
 
 </style>
 
+<script>
+causeRepaintsOn = $("h1, h2, h3, p");
+
+last = "";
+$(window).resize(function() {
+  console.log("resize");
+  // very hacky for now
+  if(last != "24.99vh") {
+    $(".col-sm-6").css("height", "24.99vh");
+    last = "24.99vh";
+  } else {
+    $(".col-sm-6").css("height", "25vh");
+    last = "25vh";
+  }
+});
+</script>
+
 <div class="container">
 
   <div class="row">
