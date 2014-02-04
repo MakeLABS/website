@@ -61,12 +61,15 @@ i { font-size: 10vh; margin-bottom: 1vh; }
     display:table;
 }
 
-h1 { font-size: 6vmin; padding: 0; padding-top: 4vh; }
+.va-middle {
+  display:table-cell;
+  vertical-align:middle;
+}
+
+h1 { font-size: 6vmin; padding: 0; }
 h1 bold { font-weight: 700; }
 h2 { font-size: 1.5vmin; font-weight: 700; margin: 0;}
 p { font-size: 3.0vmin; 
-  display:table-cell;
-  vertical-align:middle;
   font-family: Lato;
   font-weight: 700;
 }
@@ -82,6 +85,9 @@ button {
     width: 100%;
     text-align: center;
   }
+  p { font-size: 3.0vh; } 
+  h1 { font-size: 5.0vh; } 
+  h2 { font-size: 2.0vh; } 
 }
 
 @media (min-width: 768px){
@@ -118,11 +124,13 @@ $(window).resize(function() {
 
   <div class="row">
     <div class="col-sm-6 bg-dark-grey white">
-      <h1>Make<bold>LABS</bold></h1>
-      <h2 class="gray">LONDON &amp; NEW YORK</h2>
+      <div class="va-middle">
+        <h1>Make<bold>LABS</bold></h1>
+        <h2 class="gray">LONDON &amp; NEW YORK</h2>
+      </div>
     </div>
     <div class="col-sm-6 bg-pink white">
-      <p>MakeLABS - a full stack,<br>
+      <p class="va-middle">MakeLABS - a full stack,<br>
         design-driven Ruby/<br>
         Rails and Android<br>
         development shop.</p>
@@ -131,7 +139,7 @@ $(window).resize(function() {
 
   <div class="row">
     <div class="col-sm-6 bg-green white">
-      <p>We're a tightly<br>
+      <p class="va-middle">We're a tightly<br>
         integrated team of two<br>
         with a full suite of<br>
         design and<br>
@@ -144,7 +152,7 @@ $(window).resize(function() {
 
   <div class="row">
     <div class="col-sm-6 bg-silver">
-      <p>
+      <p class="va-middle">
         Jess Eddy<br>
         User Experience<br>
         <br>
@@ -152,7 +160,7 @@ $(window).resize(function() {
       </p>
     </div>
     <div class="col-sm-6 bg-lg-grey white">
-      <p>
+      <p class="va-middle">
         Rich Hollis<br>
         Engineering<br>
         <br>
@@ -166,7 +174,7 @@ $(window).resize(function() {
       <img src="http://www.hdwallpapers.in/walls/apple_mac-wide.jpg">
     </div>
     <div class="col-sm-6 bg-lg-yellow">
-      <p>
+      <p class="va-middle">
         <i class="fa fa-comment-o"></i><br>
         <br>
         <button class="b-gray">Let's Chat!</button>
