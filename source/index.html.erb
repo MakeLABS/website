@@ -6,7 +6,11 @@ title: We are MakeLABS
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 <style>
+
+* { box-sizing: Border-box; } 
+
 i { font-size: 10vh; margin-bottom: 1vh; }
+
 .row .col-sm-6 { height: 25vh; 
   text-align: center;    
 }
@@ -19,22 +23,47 @@ i { font-size: 10vh; margin-bottom: 1vh; }
 .bg-lg-yellow { background-color: #fff9db; }
 .bg-black { background-color: black;}
 .white { color: white; }
+.gray { color: #687279;}
+
+.b-gray { border: 2px solid gray; }
+.b-white { border: 2px solid white; }
 
 .col-sm-6 {
-    display:table !important;
+    display:table;
 }
 
-p { font-size: 3.5vmin; 
+h1 { font-size: 6vmin; padding: 0; padding-top: 4vh; }
+h1 bold { font-weight: 700; }
+h2 { font-size: 1.5vmin; font-weight: 700; margin: 0;}
+p { font-size: 3.0vmin; 
   display:table-cell;
   vertical-align:middle;
   font-family: Lato;
   font-weight: 700;
 }
 img { height: 25vh; width: 100%;}
-button { border: 2px solid gray; 
+button { 
   width: 80%; 
   background: transparent;
   border-radius: 10px;
+}
+
+@media (max-width: 767px){
+  .col-sm-6 { 
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px){
+  html { overflow: hidden; }
+    .container {
+        margin-right: 0;
+        margin-left: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
 }
 
 </style>
@@ -60,19 +89,24 @@ $(window).resize(function() {
 
   <div class="row">
     <div class="col-sm-6 bg-dark-grey white">
-      <p>
-        MakeLABS<br>
-        <ss>LONDON &amp; NEW YORK</ss>
-      </p>
+      <h1>Make<bold>LABS</bold></h1>
+      <h2 class="gray">LONDON &amp; NEW YORK</h2>
     </div>
     <div class="col-sm-6 bg-pink white">
-      <p>MakeLABS - a full stack, design-driven Ruby/Rails and Android development shop.</p>
+      <p>MakeLABS - a full stack,<br>
+        design-driven Ruby/<br>
+        Rails and Android<br>
+        development shop.</p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-sm-6 bg-green white">
-      <p>We're a tighgly integrated team of two with a full suite of design and engineering talent.</p>
+      <p>We're a tightly<br>
+        integrated team of two<br>
+        with a full suite of<br>
+        design and<br>
+        engineering talent.</p>
     </div>
     <div class="col-sm-6 bg-black">
       <img src="http://www.hdwallpapers.in/walls/apple_mac-wide.jpg">
@@ -84,14 +118,16 @@ $(window).resize(function() {
       <p>
         Jess Eddy<br>
         User Experience<br>
-        <button>Meet Jess</button>
+        <br>
+        <button class="b-gray">Meet Jess</button>
       </p>
     </div>
     <div class="col-sm-6 bg-lg-grey white">
       <p>
         Rich Hollis<br>
         Engineering<br>
-        <button>Meet Rich</button>
+        <br>
+        <button class="b-white">Meet Rich</button>
       </p>
     </div>
   </div>
@@ -103,7 +139,8 @@ $(window).resize(function() {
     <div class="col-sm-6 bg-lg-yellow">
       <p>
         <i class="fa fa-comment-o"></i><br>
-        <button>Let's Chat!</button>
+        <br>
+        <button class="b-gray">Let's Chat!</button>
       </p>
     </div>
   </div>
